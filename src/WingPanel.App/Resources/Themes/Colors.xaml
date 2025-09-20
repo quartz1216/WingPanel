@@ -1,0 +1,8 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="PanelAccentColor">#FF4CAF50</Color>
+    <SolidColorBrush x:Key="PanelAccentBrush" Color="{StaticResource PanelAccentColor}" />
+    <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FF1F1F1F" />
+    <SolidColorBrush x:Key="PanelForegroundBrush" Color="#FFFFFFFF" />
+</ResourceDictionary>
