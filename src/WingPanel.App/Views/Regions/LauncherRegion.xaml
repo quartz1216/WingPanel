@@ -1,0 +1,26 @@
+<UserControl
+    x:Class="WingPanel.App.Views.Regions.LauncherRegion"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Name="Root"
+    x:DefaultBindMode="OneWay">
+    <Grid>
+        <StackPanel Spacing="4">
+            <TextBlock Text="{x:Bind ViewModel.Title}" Style="{StaticResource RegionHeaderTextStyle}" />
+            <ListView
+                ItemsSource="{x:Bind ViewModel.FrequentApps}"
+                SelectionMode="None"
+                IsItemClickEnabled="True"
+                ItemClick="LauncherList_ItemClick">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="x:String">
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <FontIcon Glyph="&#xE8B7;" />
+                            <TextBlock Text="{x:Bind}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</UserControl>
